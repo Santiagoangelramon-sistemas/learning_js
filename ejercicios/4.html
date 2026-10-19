@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Visualizador de Imágenes</title>
+    <script>
+        function cambiarImagen() {
+            let nombreImagen = document.getElementById("listaImagenes").value; // [6]
+            document.getElementById("imagenVisor").src = nombreImagen; // [6]
+        }
+    </script>
+</head>
+<body>
+    <h1>Visualizador de Imágenes</h1>
+    <label for="listaImagenes">Seleccione una imagen:</label>
+    <select id="listaImagenes" onchange="cambiarImagen()">
+        <option value="img/escudoGuanenta.png">Escudo Guanentá</option> <!-- [6] -->
+        <option value="img/logoSistemas.jpg">Imagen 1</option>
+        <option value="img/imagen2.jpg">Imagen 2</option>
+    </select>
+    <br><br>
+    <img id="imagenVisor" src="img/escudoGuanenta.png" alt="Imagen seleccionada" style="max-width: 300px;"> <!-- [6] -->
+</body>
+</html>

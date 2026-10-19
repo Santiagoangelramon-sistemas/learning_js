@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 - Formato de Texto</title>
+    <script>
+        function aplicarEstilos() {
+            let negrita = document.getElementById("selectNegrita").value;
+            let cursiva = document.getElementById("selectCursiva").value;
+            let texto = document.getElementById("textoEjemplo");
+
+            texto.style.fontWeight = negrita;
+            texto.style.fontStyle = cursiva;
+        }
+    </script>
+</head>
+<body>
+    <h1>Modificar Formato de Texto</h1>
+
+    <p id="textoEjemplo">Este es un texto de prueba que cambiará según la selección.</p>
+
+    <label for="selectNegrita">Negrita:</label>
+    <select id="selectNegrita" onchange="aplicarEstilos()">
+        <option value="normal">No</option>
+        <option value="bold">Sí</option>
+    </select>
+
+    <label for="selectCursiva">Cursiva:</label>
+    <select id="selectCursiva" onchange="aplicarEstilos()">
+        <option value="normal">No</option>
+        <option value="italic">Sí</option>
+    </select>
+</body>
+</html>

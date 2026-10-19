@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Dato en párrafo</title>
+</head>
+<body>
+    <h1>Dato de ventana emergente a párrafo</h1>
+    <p id="parrafoDato">El texto ingresado aparecerá aquí.</p>
+
+    <script>
+        // Solicita el dato en una ventana emergente
+        let textoIngresado = prompt("Ingrese un dato por favor:", "Texto por defecto"); // [3]
+        
+        // Muestra el dato como contenido del párrafo
+        if (textoIngresado !== null) {
+            document.getElementById("parrafoDato").innerHTML = textoIngresado; // [4]
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 - Input a Div</title>
+    <script>
+        function mostrarEnDiv() {
+            let texto = document.getElementById("textoInput").value; // [4]
+            document.getElementById("capaDiv").innerHTML = texto; // [5]
+        }
+    </script>
+</head>
+<body>
+    <h1>Enviar texto a una capa DIV</h1>
+    <input type="text" id="textoInput" placeholder="Escriba algo aquí">
+    <button onclick="mostrarEnDiv()">Mostrar en el DIV</button>
+
+    <div id="capaDiv" style="margin-top: 15px; padding: 10px; border: 1px solid #000;">
+        Contenido del DIV...
+    </div>
+</body>
+</html>
